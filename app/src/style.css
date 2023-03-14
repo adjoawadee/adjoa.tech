@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+    overflow-x: hidden;
+  }
 body {
     font-family: 'Syne', sans-serif;
 }
@@ -9,24 +12,24 @@ body {
 .bkg-shape {
     height: 800px;
     width: 800px;
-    @apply bg-orange-200 absolute rounded-full -bottom-96 -left-60 -z-10 opacity-70
+    @apply bg-orange-200 absolute rounded-full -bottom-96 -left-60 -z-10 opacity-70 overflow-hidden
 }
 
 .bkg-shape-sm {
     height: 500px;
     width: 500px;
-    @apply bg-yellow-100 absolute rounded-full bottom-72 -left-40 -z-10 opacity-80
+    @apply bg-yellow-100 absolute rounded-full bottom-72 -left-40 -z-10 opacity-80 overflow-hidden
 }
 
 .bkg-shape-img {
     height: 500px;
     width: 500px;
-    @apply bg-gradient-to-r from-rose-200 via-orange-200 to-orange-100 absolute rounded-full -z-10 opacity-50 bottom-64
+    @apply bg-gradient-to-r from-rose-200 via-orange-200 to-orange-100 absolute rounded-full -z-10 opacity-50 bottom-64 overflow-hidden
 }
 
 .bkg-shape-orange-gr {
     height: 500px;
     width: 200px;
-    @apply bg-gradient-to-br from-pink-300 via-amber-100 to-fuchsia-200 absolute rounded-full -z-10 opacity-50 -right-20
+    @apply bg-gradient-to-br from-pink-300 via-amber-100 to-fuchsia-200 absolute rounded-full -z-10 opacity-50 -right-20 overflow-hidden
 }
   

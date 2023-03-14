@@ -1,5 +1,5 @@
 <template>
-    <nav class="container flex flex-wrap items-center justify-between mx-auto md:p-7 p-5 text-amber-600">
+    <nav class="container flex flex-wrap items-center justify-between mx-auto p-7 text-amber-600">
         <a href="/">
             <span class="self-center text-2xl font-semibold whitespace-nowrap">Adjoa</span>
             <span>.</span>
