@@ -1,30 +1,68 @@
+<script setup lang="ts">
+import { ref } from "vue";
+const isMobileMenuOpen = ref(false);
+const handleClick = () => {
+    isMobileMenuOpen.value = !isMobileMenuOpen.value;
+}
+</script>
 <template>
-    <nav class="container flex flex-wrap items-center justify-between mx-auto p-7 text-amber-600">
-        <a href="/">
-            <span class="self-center text-2xl font-semibold whitespace-nowrap">Adjoa</span>
-            <span>.</span>
-            <span class="text-2xl">tech</span>
-        </a>
+    <header class="text-amber-600 container overflow-hidden md:pb-32">
+        <nav class="flex justify-between bg-orange-200 md:px-24 p-4 w-full fixed top-0 z-10">
+            <div class="flex items-center pl-2">
+                <a href="/">
+                    <span class="text-2xl font-semibold">Adjoa</span>
+                    <span>.</span>
+                    <span class="text-2xl">tech</span>
+                </a>
+            </div>
 
-        <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm rounded-lg md:hidden hover:bg-orange-200 focus:outline-none focus:ring-2 focus:ring-amber-600" aria-controls="navbar-default" aria-expanded="false">
-            <span class="sr-only">Open main menu</span>
-            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-        </button>
-        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="flex flex-row p-4 mt-4 md:space-x-8 md:mt-0 md:text-sm md:font-medium">
-                <li>
-                    <a href="#" class="py-2 pl-3 pr-4 md:p-0" aria-current="page">About</a>
-                </li>
-                <li>
-                    <a href="#" class="py-2 pl-3 pr-4 md:p-0">Experience</a>
-                </li>
-                <li>
-                    <a href="#" class="py-2 pl-3 pr-4 md:p-0">Projects</a>
-                </li>
-                <li>
-                    <a href="#" class="py-2 pl-3 pr-4 md:p-0">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+            <button @click="handleClick" data-collapse-toggle="navbar-default" type="button" class="p-2 text-sm md:hidden" aria-expanded="false">
+                <p class="uppercase underline underline-offset-4">menu</p>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul class="flex flex-row p-4 mt-4 md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+                    <li>
+                        <router-link class="py-2 pl-3 pr-4 md:p-0 target:shadow-lg" :to="{name:'home', hash: '#experience' }">Experience</router-link>
+                    </li>
+                    <li>
+                        <router-link href="#" class="py-2 pl-3 pr-4 md:p-0" :to="{name:'home', hash: '#projects' }">Projects</router-link>
+                    </li>
+                    <li>
+                        <router-link href="#" class="py-2 pl-3 pr-4 md:p-0" :to="{name:'home', hash: '#contact' }">Contact</router-link>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <transition enter-from-class="opacity-0"
+                        enter-to-class="opacity-100"
+                        enter-active-class="transition duration-300"
+                        leave-from-class="opacity-100"
+                        leave-to-class="opacity-0"
+                        leave-active-class="transition duration-300">
+            <div v-if="isMobileMenuOpen" class="fixed container m-auto h-full md:hidden pr-10  bg-orange-200 z-50 overflow-hidden">
+                <button @click="handleClick" data-collapse-toggle="navbar-default" type="button" class="p-2 pb-10 text-sm absolute top-5 right-7" aria-expanded="false">
+                        <p class="uppercase underline underline-offset-4">close</p>
+                </button>
+                <ul class="text-5xl pt-24 flex flex-col items-end gap-y-7">
+                    <li>
+                        <router-link @click="handleClick" :to="{name:'home', hash: '#experience' }">
+                            <p> <span class="text-sm">01.</span> Experience</p>
+                        </router-link>
+                    </li>
+                    <li>
+                        <router-link @click="handleClick" href="#" :to="{name:'home', hash: '#projects' }">
+                            <p> <span class="text-sm">02.</span> Projects</p>
+                        </router-link>
+                    </li>
+                    <li>
+                        <router-link @click="handleClick" href="#" :to="{name:'home', hash: '#contact' }">
+                            <p> <span class="text-sm">03.</span> Contact</p>
+                        </router-link>
+                    </li>
+                </ul>
+            </div>
+        </transition>
+</header>
 </template>
+
+   

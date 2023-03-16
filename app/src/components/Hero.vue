@@ -1,5 +1,5 @@
 <template>
-    <section class="container mx-auto min-h-screen relative px-7 text-amber-600">
+    <section class="container mx-auto min-h-screen relative p-24 md:p-4 px-7 text-amber-600">
         <div class="bkg-shape"></div>
         <div class="bkg-shape rotate-45 -scale-75"></div>
         <div class="bkg-shape-sm"></div>
