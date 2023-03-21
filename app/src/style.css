@@ -32,4 +32,47 @@ body {
     width: 200px;
     @apply bg-gradient-to-br from-pink-300 via-amber-100 to-fuchsia-200 absolute rounded-full -z-10 opacity-50 -right-20 overflow-hidden
 }
+
+.abstract-shape {
+    height: 400px;
+    width: 600px;
+    border-radius: 55% 45% 68% 32% / 49% 38% 62% 51%;
+    @apply -z-10 overflow-hidden
+}
+
+.abstract-shape-1 {
+    height: 700px;
+    width: 600px;
+    border-radius: 63% 37% 56% 44% / 44% 56% 44% 56%;
+    @apply -z-10 overflow-hidden
+}
+
+.wave {
+    height: 600px;
+    width: 600px;
+    --mask:
+    radial-gradient(39.65px at 50% calc(100% + 18.60px),#0000 calc(99% - 7px),#000 calc(101% - 7px) 99%,#0000 101%) calc(50% - 62px) calc(50% - 19px + .5px)/124px 38px ,
+    radial-gradient(39.65px at 50% -18.6px,#0000 calc(99% - 7px),#000 calc(101% - 7px) 99%,#0000 101%) 50% calc(50% + 19px)/124px 38px ;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+    @apply bg-gradient-to-r from-rose-200 via-orange-200 to-orange-100 -z-10 overflow-hidden
+}
+
+.vertical-wave {
+    height: 600px;
+    width: 600px;
+    --mask:
+    radial-gradient(35.65px at calc(100% + 16.80px) 50%,#0000 calc(99% - 6px),#000 calc(101% - 6px) 99%,#0000 101%) calc(50% - 17px + .5px) calc(50% - 56px)/ 34px 112px  ,
+    radial-gradient(35.65px at -16.8px 50%,#0000 calc(99% - 6px),#000 calc(101% - 6px) 99%,#0000 101%) calc(50% + 17px) 50%/34px 112px  ;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+    @apply bg-gradient-to-r from-rose-200 via-orange-200 to-orange-100 -z-10 overflow-hidden
+}
+
+.sparkle {
+    height: 60px;
+    width: 40px;
+    aspect-ratio: 1;
+    clip-path: polygon(100.00% 50.00%,71.21% 71.21%,50.00% 100.00%,28.79% 71.21%,0.00% 50.00%,28.79% 28.79%,50.00% 0.00%,71.21% 28.79%);
+}
   
