@@ -17,7 +17,7 @@
                 <div class="flex flex-col md:py-32 py-12 text-cyan-900 text-2xl space-y-1">
                     <p> <sup>01.</sup> I design and build <span class="hero-text">interactive</span> and <span class="hero-text">intuitive</span> web applications for the modern web.</p>
                     <p><sup>02.</sup> based in <span class="hero-text">the netherlands</span></p>
-                    <p><sup>03.</sup> currently a <span class="hero-text">frontend consultant</span> at Passionate People</p>
+                    <p><sup>03.</sup> currently a <span class="hero-text">frontend consultant</span> at CINQ ICT</p>
                     
                 </div>
 
