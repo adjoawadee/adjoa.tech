@@ -22,7 +22,7 @@
                         <a href="https://www.linkedin.com/in/ewadee/" target="_blank">LINKEDIN</a>
                     </li>
                     <li class="transition ease-in-out delay-150 hover:text-blue-700 duration-200">
-                        <a href="https://twitter.com/adjoa_wadee" target="_blank">TIWTTER</a>
+                        <a href="https://twitter.com/adjoa_wadee" target="_blank">X</a>
                     </li>
                     <li class="transition ease-in-out delay-150 hover:text-blue-700 duration-200">
                         <a href="mailto:adjoawadee@gmail.com?subject=Hi Adjoa...">MAIL</a>
